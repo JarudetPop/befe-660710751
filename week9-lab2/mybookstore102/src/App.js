@@ -38,7 +38,7 @@ function App() {
                <Route path="/categories" element={<CategoryPage />} />
                <Route path="/categories/:category" element={<CategoryPage />} />
                <Route path="/about" element={<AboutPage />} />
-               <Route path="/contact" element={<ContactPage />} />
+               <Route path="/contact" element={<ContactPage />} />\
                <Route path="*" element={<NotFound />} />
              </Routes>
            </main>
