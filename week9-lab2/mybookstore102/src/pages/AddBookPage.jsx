@@ -14,14 +14,10 @@ const AddBookPage = () => {
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [successMessage, setSuccessMessage] = useState('');
-  
 
-  // ตรวจสอบ Authentication เมื่อ Component โหลด
   useEffect(() => {
-    // 1. อ่านสถานะจาก localStorage
+    // Check authentication
     const isAuthenticated = localStorage.getItem('isAdminAuthenticated');
-
-    // // 2. ถ้าไม่มีค่า (ยังไม่ login) → redirect ไป /login
     if (!isAuthenticated) {
       navigate('/login');
     }
